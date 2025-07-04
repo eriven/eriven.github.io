@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Useless Solana Extension - Probably Won't Make You Rich</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 50px 0;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transform: rotate(-1deg);
+        }
+        
+        .header h1 {
+            font-size: 4rem;
+            color: #ff6b6b;
+            text-shadow: 3px 3px 0px #333;
+            margin-bottom: 20px;
+            animation: wobble 2s ease-in-out infinite;
+        }
+        
+        @keyframes wobble {
+            0%, 100% { transform: rotate(-1deg); }
+            25% { transform: rotate(1deg); }
+            75% { transform: rotate(-0.5deg); }
+        }
+        
+        .header p {
+            font-size: 1.5rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .disclaimer {
+            background: #ffeb3b;
+            padding: 20px;
+            border-radius: 10px;
+            border: 3px dashed #ff5722;
+            margin: 30px 0;
+            transform: rotate(1deg);
+        }
+        
+        .disclaimer h3 {
+            color: #d32f2f;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transform: rotate(0.5deg);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:nth-child(even) {
+            transform: rotate(-0.5deg);
+        }
+        
+        .feature-card:hover {
+            transform: scale(1.05) rotate(0deg);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        
+        .feature-card h3 {
+            color: #4ecdc4;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .install-section {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 50px;
+            border-radius: 20px;
+            margin: 50px 0;
+            transform: rotate(-0.5deg);
+        }
+        
+        .install-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            padding: 20px 40px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .install-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+        
+        .testimonials {
+            margin: 50px 0;
+        }
+        
+        .testimonial {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 5px solid #ff6b6b;
+            font-style: italic;
+            transform: rotate(0.3deg);
+        }
+        
+        .testimonial:nth-child(even) {
+            transform: rotate(-0.3deg);
+            border-left-color: #4ecdc4;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            border-radius: 15px;
+            margin-top: 50px;
+        }
+        
+        .emoji {
+            font-size: 2rem;
+            display: inline-block;
+            animation: bounce 1s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .moon {
+            position: fixed;
+            top: 10%;
+            right: 10%;
+            font-size: 4rem;
+            animation: float 6s ease-in-out infinite;
+            z-index: 1000;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="moon">🌙</div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Useless Solana Extension</h1>
+            <p>✨ The Most Pointless Way to Check Token Charts ✨</p>
+            <p><span class="emoji">🚀</span> Now 69% More Useless Than Before! <span class="emoji">🚀</span></p>
+        </div>
+        
+        <div class="disclaimer">
+            <h3>⚠️ IMPORTANT DISCLAIMER ⚠️</h3>
+            <p><strong>This extension is completely useless and will not:</strong></p>
+            <ul style="margin: 10px 0 0 20px; font-size: 1.1rem;">
+                <li>Make you rich (probably)</li>
+                <li>Help you find the next 1000x gem</li>
+                <li>Prevent you from buying rugs</li>
+                <li>Give you financial advice (thankfully)</li>
+                <li>Make your wife come back</li>
+            </ul>
+        </div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <h3>🎯 "Smart" Address Detection</h3>
+                <p>Our revolutionary AI (Actually Idiotic) technology can sometimes detect Solana token addresses! It's like magic, but worse and less reliable.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🔘 Floating Buttons of Disappointment</h3>
+                <p>Click or double-click any Solana address and watch as mystical floating buttons appear! They might even work 60% of the time, every time.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>📊 Triple Chart Access</h3>
+                <p>Instantly jump to Dexscreener, GMGN, or Axiom charts! Because checking one chart isn't enough to confirm your poor life choices.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🤡 Right-Click Menu Magic</h3>
+                <p>Right-click integration that adds exactly zero value to your trading experience! But hey, it's there and that's what matters.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🔒 Privacy-Focused (Because We're Too Lazy to Collect Data)</h3>
+                <p>We don't track you because honestly, we couldn't figure out how to implement analytics. Your secrets are safe with our incompetence!</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🌐 Works Everywhere*</h3>
+                <p>Twitter, Discord, Telegram, your mom's Facebook posts - if there's a Solana address, we'll probably detect it! *Results may vary wildly.</p>
+            </div>
+        </div>
+        
+        <div class="install-section">
+            <h2 style="margin-bottom: 30px; color: #ff6b6b;">Ready to Waste Your Time?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">Join the dozens of users who've installed this completely unnecessary extension!</p>
+            <a href="#" class="install-btn">Install This Mistake</a>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">
+                *Chrome Web Store link coming soon™ (maybe)
+            </p>
+        </div>
+        
+        <div class="testimonials">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #4ecdc4;">What Our Disappointed Users Say</h2>
+            
+            <div class="testimonial">
+                <p>"I thought this would make me rich. I was wrong. 2/10 would not recommend." - Chad, Professional Rugpuller</p>
+            </div>
+            
+            <div class="testimonial">
+                <p>"This extension is as useless as promised. Finally, truth in advertising!" - Karen, Crypto Manager</p>
+            </div>
+            
+            <div class="testimonial">
+                <p>"I installed it by accident and now I'm too lazy to uninstall it. It just... exists." - Bob, Accidental User</p>
+            </div>
+            
+            <div class="testimonial">
+                <p>"My portfolio is still down 90%, but at least now I can check my losses faster!" - Moon Boi #47382</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <h3>🎉 Congratulations! 🎉</h3>
+            <p>You've just wasted 3 minutes reading about a useless extension!</p>
+            <p style="margin-top: 20px; font-size: 0.8rem;">
+                Made with ❤️ and poor life choices | Not financial advice | DYOR (Do Your Own Rekt)
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Add some random floating emojis because why not
+        function createFloatingEmoji() {
+            const emojis = ['🚀', '💎', '🌙', '💸', '📉', '📈', '🤡', '😭', '💰', '🔥'];
+            const emoji = document.createElement('div');
+            emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            emoji.style.position = 'fixed';
+            emoji.style.left = Math.random() * 100 + '%';
+            emoji.style.top = '100%';
+            emoji.style.fontSize = '2rem';
+            emoji.style.zIndex = '999';
+            emoji.style.pointerEvents = 'none';
+            emoji.style.transition = 'all 3s linear';
+            
+            document.body.appendChild(emoji);
+            
+            setTimeout(() => {
+                emoji.style.top = '-100px';
+                emoji.style.transform = 'rotate(360deg)';
+            }, 100);
+            
+            setTimeout(() => {
+                document.body.removeChild(emoji);
+            }, 3000);
+        }
+        
+        // Create floating emojis every 2 seconds
+        setInterval(createFloatingEmoji, 2000);
+        
+        // Add click handler for install button
+        document.querySelector('.install-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Extension not yet available! But thanks for wanting to waste your time with us! 🎉');
+        });
+    </script>
+</body>
+</html>
